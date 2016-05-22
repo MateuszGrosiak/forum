@@ -12,6 +12,7 @@ use AppBundle\Form\ThreadType;
 /**
  * Thread controller.
  *
+ * @Route("/", name="homepage")
  * @Route("/thread")
  */
 class ThreadController extends Controller
