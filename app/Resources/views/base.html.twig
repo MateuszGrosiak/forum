@@ -8,7 +8,10 @@
         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="container-fluid">
+            {% block body %}{% endblock %}
+        </div>
+
         {% block javascripts %}{% endblock %}
 
         <script src="{{ asset('js/jquery-2.2.4.js') }}"></script>
