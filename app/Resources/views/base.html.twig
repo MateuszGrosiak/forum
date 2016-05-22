@@ -8,6 +8,7 @@
         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     </head>
     <body>
+        {% include('elements/menu.html.twig') %}
         <div class="container-fluid">
             {% block body %}{% endblock %}
         </div>
