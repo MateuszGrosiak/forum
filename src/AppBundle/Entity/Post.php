@@ -28,6 +28,14 @@ class Post
      */
     private $body;
 
+    /**
+     * @var Thread
+     *
+     * @ORM\ManyToOne(targetEntity="Thread")
+     * @ORM\JoinColumn(name="thread_id", referencedColumnName="id")
+     */
+    private $thread;
+
 
     /**
      * Get id
@@ -62,5 +70,28 @@ class Post
     {
         return $this->body;
     }
-}
 
+    /**
+     * Set thread
+     *
+     * @param \AppBundle\Entity\Thread $thread
+     *
+     * @return Post
+     */
+    public function setThread(\AppBundle\Entity\Thread $thread = null)
+    {
+        $this->thread = $thread;
+
+        return $this;
+    }
+
+    /**
+     * Get thread
+     *
+     * @return \AppBundle\Entity\Thread
+     */
+    public function getThread()
+    {
+        return $this->thread;
+    }
+}
